@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尺码横版转竖版</title>
+</head>
+
+<body>
+    {% load static %}
+    <a href="/download/">下载模板</a>
+    <br></br>
+    <form enctype="multipart/form-data" action="/upload/" method="post">
+        <input type="file" name="myfile" />
+        <input type="submit" value="开始转换" />
+    </form>
+    <h2>实现效果</h2>
+    <img src="{% static 'imge/2.png' %}" alt="My image" style="max-width: 100%">
+    <H2>使用方法</H2>
+    <P>首先点击最上方下载模板</P>
+    <p>文件要求:</p>
+    <p>
+        <li>款号、色号必须完整填写</li>
+        <li>有罩杯的款和无罩杯的款不可同时进行转换</li>
+        <li>如下图尺码需要设置为自己款号的尺码组</li>
+        <img src="{% static 'imge/1.png' %}" alt="My image" style="max-width: 100%">
+        <li>文件编辑完成后选择文件,然后点击上传</li>
+        <li>此时会跳出文件下载,下载的文件即转换后的文件</li>
+
+    </p>
+</body>
+
+</html>
+
